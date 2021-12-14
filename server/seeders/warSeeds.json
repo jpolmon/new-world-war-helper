@@ -1,0 +1,464 @@
+[
+  {
+    "city": "Brightwood",
+    "date": "Tuesday, October 19th",
+    "time": "9:00 PM",
+    "warAuthor": "MaxAxe",
+    "tanks": [
+      {
+        "username": "Leeroy Jenkins",
+        "charLvl": "54",
+        "primaryWep": "SS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "GA",
+        "secondaryWepLvl": "18"
+      },
+      {
+        "username": "Arthur Gross",
+        "charLvl": "55",
+        "primaryWep": "SS",
+        "primaryWepLvl": "19",
+        "secondaryWep": "WH",
+        "secondaryWepLvl": "19"
+      },
+      {
+        "username": "Harold Daniel",
+        "charLvl": "52",
+        "primaryWep": "SS",
+        "primaryWepLvl": "18",
+        "secondaryWep": "HA",
+        "secondaryWepLvl": "20"
+      }
+    ],
+    "mdps": [
+      {
+        "username": "Reckful",
+        "charLvl": "50",
+        "primaryWep": "RA",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "20"
+      },
+      {
+        "username": "Aubertin Dior",
+        "charLvl": "57",
+        "primaryWep": "GA",
+        "primaryWepLvl": "19",
+        "secondaryWep": "HA",
+        "secondaryWepLvl": "18"
+      },
+      {
+        "username": "Dimenche Beauchamp",
+        "charLvl": "55",
+        "primaryWep": "WH",
+        "primaryWepLvl": "18",
+        "secondaryWep": "GA",
+        "secondaryWepLvl": "18"
+      }
+    ],
+    "prdps": [
+      {
+        "username": "Tim Berger",
+        "charLvl": "56",
+        "primaryWep": "MU",
+        "primaryWepLvl": "17",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "17"
+      },
+      {
+        "username": "Matthias Riedl",
+        "charLvl": "60",
+        "primaryWep": "MU",
+        "primaryWepLvl": "18",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "17"
+      },
+      {
+        "username": "Maso Calbi",
+        "charLvl": "57",
+        "primaryWep": "MU",
+        "primaryWepLvl": "20",
+        "secondaryWep": "BO",
+        "secondaryWepLvl": "19"
+      }
+    ],
+    "erdps": [
+      {
+        "username": "Bandino Fioravanti",
+        "charLvl": "58",
+        "primaryWep": "FS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "20"
+      },
+      {
+        "username": "Estevan De Cepeda",
+        "charLvl": "55",
+        "primaryWep": "FS",
+        "primaryWepLvl": "19",
+        "secondaryWep": "MU",
+        "secondaryWepLvl": "18"
+      },
+      {
+        "username": "Reinhard Bartsch",
+        "charLvl": "60",
+        "primaryWep": "FS",
+        "primaryWepLvl": "17",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "17"
+      }
+    ],
+    "healers": [
+      {
+        "username": "Hildemar Riemann",
+        "charLvl": "52",
+        "primaryWep": "LS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "19"
+      },
+      {
+        "username": "Spurius Roscius",
+        "charLvl": "54",
+        "primaryWep": "LS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "18"
+      }
+    ],
+    "artillery": [
+      {
+        "username": "William Barry",
+        "charLvl": "52",
+        "primaryWep": "GA",
+        "primaryWepLvl": "20",
+        "secondaryWep": "HA",
+        "secondaryWepLvl": "17"
+      },
+      {
+        "username": "Hamericus Beaulieu",
+        "charLvl": "58",
+        "primaryWep": "GA",
+        "primaryWepLvl": "20",
+        "secondaryWep": "WH",
+        "secondaryWepLvl": "19"
+      },
+      {
+        "username": "Michault Chuquet",
+        "charLvl": "58",
+        "primaryWep": "BO",
+        "primaryWepLvl": "20",
+        "secondaryWep": "RA",
+        "secondaryWepLvl": "20"
+      }
+    ]
+  },
+  {
+    "city": "Everfall",
+    "date": "Thursday, October 21st",
+    "time": "8:00 PM",
+    "warAuthor": "DpsDanny",
+    "tanks": [
+      {
+        "username": "Leeroy Jenkins",
+        "charLvl": "54",
+        "primaryWep": "SS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "GA",
+        "secondaryWepLvl": "18"
+      },
+      {
+        "username": "Arthur Gross",
+        "charLvl": "55",
+        "primaryWep": "SS",
+        "primaryWepLvl": "19",
+        "secondaryWep": "WH",
+        "secondaryWepLvl": "19"
+      },
+      {
+        "username": "Harold Daniel",
+        "charLvl": "52",
+        "primaryWep": "SS",
+        "primaryWepLvl": "18",
+        "secondaryWep": "HA",
+        "secondaryWepLvl": "20"
+      }
+    ],
+    "mdps": [
+      {
+        "username": "Reckful",
+        "charLvl": "50",
+        "primaryWep": "RA",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "20"
+      },
+      {
+        "username": "Aubertin Dior",
+        "charLvl": "57",
+        "primaryWep": "GA",
+        "primaryWepLvl": "19",
+        "secondaryWep": "HA",
+        "secondaryWepLvl": "18"
+      },
+      {
+        "username": "Dimenche Beauchamp",
+        "charLvl": "55",
+        "primaryWep": "WH",
+        "primaryWepLvl": "18",
+        "secondaryWep": "GA",
+        "secondaryWepLvl": "18"
+      }
+    ],
+    "prdps": [
+      {
+        "username": "Tim Berger",
+        "charLvl": "56",
+        "primaryWep": "MU",
+        "primaryWepLvl": "17",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "17"
+      },
+      {
+        "username": "Matthias Riedl",
+        "charLvl": "60",
+        "primaryWep": "MU",
+        "primaryWepLvl": "18",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "17"
+      },
+      {
+        "username": "Maso Calbi",
+        "charLvl": "57",
+        "primaryWep": "MU",
+        "primaryWepLvl": "20",
+        "secondaryWep": "BO",
+        "secondaryWepLvl": "19"
+      }
+    ],
+    "erdps": [
+      {
+        "username": "Bandino Fioravanti",
+        "charLvl": "58",
+        "primaryWep": "FS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "20"
+      },
+      {
+        "username": "Estevan De Cepeda",
+        "charLvl": "55",
+        "primaryWep": "FS",
+        "primaryWepLvl": "19",
+        "secondaryWep": "MU",
+        "secondaryWepLvl": "18"
+      },
+      {
+        "username": "Reinhard Bartsch",
+        "charLvl": "60",
+        "primaryWep": "FS",
+        "primaryWepLvl": "17",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "17"
+      }
+    ],
+    "healers": [
+      {
+        "username": "Hildemar Riemann",
+        "charLvl": "52",
+        "primaryWep": "LS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "19"
+      },
+      {
+        "username": "Spurius Roscius",
+        "charLvl": "54",
+        "primaryWep": "LS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "18"
+      }
+    ],
+    "artillery": [
+      {
+        "username": "William Barry",
+        "charLvl": "52",
+        "primaryWep": "GA",
+        "primaryWepLvl": "20",
+        "secondaryWep": "HA",
+        "secondaryWepLvl": "17"
+      },
+      {
+        "username": "Hamericus Beaulieu",
+        "charLvl": "58",
+        "primaryWep": "GA",
+        "primaryWepLvl": "20",
+        "secondaryWep": "WH",
+        "secondaryWepLvl": "19"
+      },
+      {
+        "username": "Michault Chuquet",
+        "charLvl": "58",
+        "primaryWep": "BO",
+        "primaryWepLvl": "20",
+        "secondaryWep": "RA",
+        "secondaryWepLvl": "20"
+      }
+    ]
+  },
+  {
+    "city": "Windsward",
+    "date": "Friday, October 22nd",
+    "time": "7:30 PM",
+    "warAuthor": "KentTank",
+    "tanks": [
+      {
+        "username": "Leeroy Jenkins",
+        "charLvl": "54",
+        "primaryWep": "SS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "GA",
+        "secondaryWepLvl": "18"
+      },
+      {
+        "username": "Arthur Gross",
+        "charLvl": "55",
+        "primaryWep": "SS",
+        "primaryWepLvl": "19",
+        "secondaryWep": "WH",
+        "secondaryWepLvl": "19"
+      },
+      {
+        "username": "Harold Daniel",
+        "charLvl": "52",
+        "primaryWep": "SS",
+        "primaryWepLvl": "18",
+        "secondaryWep": "HA",
+        "secondaryWepLvl": "20"
+      }
+    ],
+    "mdps": [
+      {
+        "username": "Reckful",
+        "charLvl": "50",
+        "primaryWep": "RA",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "20"
+      },
+      {
+        "username": "Aubertin Dior",
+        "charLvl": "57",
+        "primaryWep": "GA",
+        "primaryWepLvl": "19",
+        "secondaryWep": "HA",
+        "secondaryWepLvl": "18"
+      },
+      {
+        "username": "Dimenche Beauchamp",
+        "charLvl": "55",
+        "primaryWep": "WH",
+        "primaryWepLvl": "18",
+        "secondaryWep": "GA",
+        "secondaryWepLvl": "18"
+      }
+    ],
+    "prdps": [
+      {
+        "username": "Tim Berger",
+        "charLvl": "56",
+        "primaryWep": "MU",
+        "primaryWepLvl": "17",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "17"
+      },
+      {
+        "username": "Matthias Riedl",
+        "charLvl": "60",
+        "primaryWep": "MU",
+        "primaryWepLvl": "18",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "17"
+      },
+      {
+        "username": "Maso Calbi",
+        "charLvl": "57",
+        "primaryWep": "MU",
+        "primaryWepLvl": "20",
+        "secondaryWep": "BO",
+        "secondaryWepLvl": "19"
+      }
+    ],
+    "erdps": [
+      {
+        "username": "Bandino Fioravanti",
+        "charLvl": "58",
+        "primaryWep": "FS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "20"
+      },
+      {
+        "username": "Estevan De Cepeda",
+        "charLvl": "55",
+        "primaryWep": "FS",
+        "primaryWepLvl": "19",
+        "secondaryWep": "MU",
+        "secondaryWepLvl": "18"
+      },
+      {
+        "username": "Reinhard Bartsch",
+        "charLvl": "60",
+        "primaryWep": "FS",
+        "primaryWepLvl": "17",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "17"
+      }
+    ],
+    "healers": [
+      {
+        "username": "Hildemar Riemann",
+        "charLvl": "52",
+        "primaryWep": "LS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "19"
+      },
+      {
+        "username": "Spurius Roscius",
+        "charLvl": "54",
+        "primaryWep": "LS",
+        "primaryWepLvl": "20",
+        "secondaryWep": "IG",
+        "secondaryWepLvl": "18"
+      }
+    ],
+    "artillery": [
+      {
+        "username": "William Barry",
+        "charLvl": "52",
+        "primaryWep": "GA",
+        "primaryWepLvl": "20",
+        "secondaryWep": "HA",
+        "secondaryWepLvl": "17"
+      },
+      {
+        "username": "Hamericus Beaulieu",
+        "charLvl": "58",
+        "primaryWep": "GA",
+        "primaryWepLvl": "20",
+        "secondaryWep": "WH",
+        "secondaryWepLvl": "19"
+      },
+      {
+        "username": "Michault Chuquet",
+        "charLvl": "58",
+        "primaryWep": "BO",
+        "primaryWepLvl": "20",
+        "secondaryWep": "RA",
+        "secondaryWepLvl": "20"
+      }
+    ]
+  }
+]

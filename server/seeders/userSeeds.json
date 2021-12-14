@@ -1,0 +1,57 @@
+[
+  {
+    "username": "BrianMage",
+    "email": "brianmage@gmail.com",
+    "password": "password1",
+    "discord": "brianmage#1337",
+    "level": "60",
+    "main": "FS",
+    "mainlvl": "20",
+    "secondary": "IG",
+    "secondarylvl": "19"
+  },
+  {
+    "username": "MaxAxe",
+    "email": "maxaxe@gmail.com",
+    "password": "password2",
+    "discord": "maxeaxe#4592",
+    "level": "59",
+    "main": "HA",
+    "mainlvl": "18",
+    "secondary": "WH",
+    "secondarylvl": "17"
+  },
+  {
+    "username": "ArtilleyAllen",
+    "email": "artilleryallen@gmail.com",
+    "password": "password3",
+    "discord": "artilleryallen#1234",
+    "level": "58",
+    "main": "GA",
+    "mainlvl": "16",
+    "secondary": "HA",
+    "secondarylvl": "15"
+  },
+  {
+    "username": "KentTank",
+    "email": "kenttank@gmail.com",
+    "password": "password4",
+    "discord": "kenttank#1010",
+    "level": "57",
+    "main": "SS",
+    "mainlvl": "14",
+    "secondary": "GA",
+    "secondarylvl": "13"
+  },
+  {
+    "username": "DpsDanny",
+    "email": "dpsdanny@gmail.com",
+    "password": "password5",
+    "discord": "dpsdanny#4321",
+    "level": "56",
+    "main": "BO",
+    "mainlvl": "12",
+    "secondary": "SP",
+    "secondarylvl": "11"
+  }
+]
