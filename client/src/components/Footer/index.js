@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-import { grey, purple } from '@ant-design/colors';
+import { purple } from '@ant-design/colors';
 import { Button } from 'antd'
 
 const Footer = () => {

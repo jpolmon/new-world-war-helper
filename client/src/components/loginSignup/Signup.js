@@ -59,7 +59,7 @@ const Signup = () => {
             <Input placeholder="email"/>
           </Form.Item>
 
-          <Form.Item
+          {/* <Form.Item
             label={<label style={{ color: 'white'}}>Character Level</label>}
             style={{color: purple[3]}}
             name="level"
@@ -111,7 +111,7 @@ const Signup = () => {
             rules={[{ required: true, message: 'Please input your username!' }]}        
           >
             <Input placeholder="Discord ID"/>
-          </Form.Item>
+          </Form.Item> */}
   
           <Form.Item
             label={<label style={{ color: 'white'}}>Password</label>}

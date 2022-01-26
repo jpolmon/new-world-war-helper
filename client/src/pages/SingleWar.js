@@ -138,10 +138,10 @@ const SingleWar = () => {
     }    
   }
 
-  const wepLvls = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'];
+  const wepLvls = ['20', '19', '18', '17', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1'];
   const charLvls = []
   for(let i=1; i<61; i++) {
-    charLvls.push(`${i}`);
+    charLvls.push(`${61 - i}`);
   }
   const weps = [{name: 'Sword and Shield', abr: 'SS'}, 
                 {name: 'Rapier', abr: 'RA'}, 
