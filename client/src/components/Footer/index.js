@@ -19,7 +19,7 @@ const Footer = () => {
           </Button>
         )}
         <h4 style={{color: purple[3], textAlign: 'center', fontSize: 14, marginTop: '10rem'}}>
-          Made by Bailey, Jeffrey, and Jonathan!
+          Made by Jonathan, Bailey, and Jeffrey!
         </h4>
       </div>
     </footer>

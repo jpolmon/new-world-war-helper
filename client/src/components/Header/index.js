@@ -11,10 +11,10 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header style={{backgroundColor: grey[7], marginBottom: '3rem', paddingTop: '3rem'}}>
+    <header style={{backgroundColor: grey[7], marginBottom: '1rem', paddingTop: '1rem'}}>
       <div style={{textAlign: 'center'}}>
           <Link  to="/">
-            <h1 style={{color:purple[3]}}>New World War Helper</h1>
+            <h1 style={{color:purple[3], fontSize: '50px'}}>New World War Helper</h1>
           </Link>
       </div>
       <div style={{display: 'flex', justifyContent: 'right', marginBottom: 10, marginRight: 10}}>
@@ -22,18 +22,18 @@ const Header = () => {
            <>
            <Space>
               <Link to="/me">
-              <Button style={{backgroundColor: purple[3], color: 'white', borderColor: purple[3]}}>Wars</Button>
+              <Button style={{backgroundColor: purple[3], color: 'white', borderColor: purple[3], marginBottom: '1rem'}}>Wars</Button>
               </Link>
               <Link to="/createwar">
-              <Button style={{backgroundColor: purple[3], color: 'white', borderColor: purple[3]}}>Create War</Button>
+              <Button style={{backgroundColor: purple[3], color: 'white', borderColor: purple[3], marginBottom: '1rem'}}>Create War</Button>
               </Link>
-              <Button onClick={logout} style={{backgroundColor: purple[3], color: 'white', borderColor: purple[3]}}>Logout</Button>
+              <Button onClick={logout} style={{backgroundColor: purple[3], color: 'white', borderColor: purple[3], marginBottom: '1rem'}}>Logout</Button>
             </Space>
            </>
          ) : (
            <>
            <Space>
-              <Button style={{backgroundColor: purple[3], color: 'white', borderColor: purple[3]}}>
+              <Button style={{backgroundColor: purple[3], color: 'white', borderColor: purple[3], marginBottom: '1rem'}}>
               <Link to="/loginSignup">Login/Signup</Link>
               </Button>
             </Space>
