@@ -1,5 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
-import { useBetween } from "use-between";
+import React, { useContext } from "react";
 
 import { WarContext } from "./WarContext";
 
@@ -10,36 +9,12 @@ import Auth from '../../utils/auth';
 
 const RoleBox = ({ user, allUsers, tanks, mdps, prdps, erdps, healers, artillery, tankUsers, mdpsUsers, prdpsUsers, erdpsUsers, healersUsers, artilleryUsers }) => {
   
-  const { value1, value2, value3, value4, value5, value6 } = useContext(WarContext);
-  const [visible, setVisible] = value1;
-  const [modalText, setModalText] = value2;
+  const { value1, value2, value3, value4, value5 } = useContext(WarContext);
+  const setVisible = value1[1];
+  const setModalText = value2[1];
   const [registerDisplay, setRegisterDisplay] = value3;
-  const [userRole, setUserRole] = value4;
-  const [role, setRole] = value5;
-
-  // const { setRole, setUserRole, setVisible, setModalText, setRegisterDisplay, registerDisplay, setAllUsers, allUsers } = useSharedState()
-  // const tanks = war?.tanks || [];
-  // const mdps = war?.mdps || [];
-  // const prdps = war?.prdps || [];
-  // const erdps = war?.erdps || [];
-  // const healers = war?.healers || [];
-  // const artillery = war?.artillery || [];
-
-  // let tankUsers = tanks.map(user => user.username);
-  // let mdpsUsers = mdps.map(user => user.username);
-  // let prdpsUsers = prdps.map(user => user.username);
-  // let erdpsUsers = erdps.map(user => user.username);
-  // let healersUsers = healers.map(user => user.username);
-  // let artilleryUsers = artillery.map(user => user.username);
-
-  // useEffect(() => {  
-  //   setAllUsers([...tankUsers, 
-  //     ...mdpsUsers, 
-  //     ...prdpsUsers, 
-  //     ...erdpsUsers,
-  //     ...healersUsers,
-  //     ...artilleryUsers]);
-  // }, [])
+  const setUserRole = value4[1];
+  const setRole = value5[1];
 
   let tankEditDisplay = 'none';
   let mdpsEditDisplay = 'none';

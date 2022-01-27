@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import { useBetween } from 'use-between';
 
 import { WarContext } from "./WarContext";
 
@@ -14,14 +13,12 @@ const { Option } = Select;
 
 const MyModal = ({ warId, token, user, allUsers}) => {
 
-  const { value1, value2, value3, value4, value5, value6 } = useContext(WarContext);
+  const { value1, value2, value3, value4, value5 } = useContext(WarContext);
   const [visible, setVisible] = value1;
-  const [modalText, setModalText] = value2;
-  const [registerDisplay, setRegisterDisplay] = value3;
-  const [userRole, setUserRole] = value4;
-  const [role, setRole] = value5;
-
-  // const { visible, setVisible, setRegisterDisplay, modalText, userRole, allUsers, role } = useSharedState();
+  const modalText = value2[0];
+  const setRegisterDisplay = value3[1];
+  const userRole = value4[0];
+  const role = value5[0];
 
   const [addToWar] = useMutation(ADD_TO_WAR);
   const [updateToWar] = useMutation(UPDATE_TO_WAR);

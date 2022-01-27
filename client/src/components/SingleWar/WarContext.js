@@ -7,7 +7,6 @@ const MyProvider = props => {
   const [modalText, setModalText] = useState('');
   const [registerDisplay, setRegisterDisplay] = useState('none');
   const [userRole, setUserRole] = useState('');
-  const [allUsers, setAllUsers] = useState([]);
   const [role, setRole] = useState('');
 
   return (
