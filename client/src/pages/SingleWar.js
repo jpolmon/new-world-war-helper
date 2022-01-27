@@ -1,7 +1,12 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
+import { useBetween } from 'use-between';
 
-import { Row, Col, Card, Tooltip, Button, Modal, Select, Form, notification }  from 'antd';
+import { Row, Col, Card, Tooltip, Button, Select, Form, notification }  from 'antd';
 import { purple, red, grey } from '@ant-design/colors';
+
+import MyProvider from '../components/SingleWar/WarContext';
+import MyModal from '../components/SingleWar/Modal';
+import RoleBox from '../components/SingleWar/RoleBox';
 
 import { useParams, Redirect } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
@@ -11,14 +16,39 @@ import { ADD_TO_WAR, REMOVE_WAR, UPDATE_TO_WAR, CHANGE_ROLE } from '../utils/mut
 
 import Auth from '../utils/auth';
 
-const { Option } = Select;
+// const useSharableState = () => {
+//   const [visible, setVisible] = useState(false);
+//   const [modalText, setModalText] = useState('');
+//   const [registerDisplay, setRegisterDisplay] = useState('none');
+//   const [userRole, setUserRole] = useState('');
+//   const [allUsers, setAllUsers] = useState([]);
+//   const [role, setRole] = useState('');
+//   return {
+//     visible,
+//     setVisible,
+//     modalText,
+//     setModalText,
+//     registerDisplay,
+//     setRegisterDisplay,
+//     userRole,
+//     setUserRole,
+//     allUsers,
+//     setAllUsers,
+//     role,
+//     setRole
+//   }
+// }
+
+// const useSharedState = () => useBetween(useSharableState);
+
+// const { Option } = Select;
 
 const SingleWar = () => {
 
-  const [addToWar] = useMutation(ADD_TO_WAR);
+  // const [addToWar] = useMutation(ADD_TO_WAR);
   const [removeWar] = useMutation(REMOVE_WAR);
-  const [updateToWar] = useMutation(UPDATE_TO_WAR);
-  const [changeRole] = useMutation(CHANGE_ROLE);
+  // const [updateToWar] = useMutation(UPDATE_TO_WAR);
+  // const [changeRole] = useMutation(CHANGE_ROLE);
 
   const { warId } = useParams();
 
@@ -54,188 +84,189 @@ const SingleWar = () => {
                   ...healersUsers,
                   ...artilleryUsers];
 
-  const [visible, setVisible] = useState(false);
-  const [confirmLoading, setConfirmLoading] = useState(false);
-  const [modalText, setModalText] = useState('');
-  const [form] = Form.useForm();
-  const [role, setRole] = useState('');
+  // const [visible, setVisible] = useState(false);
+  // const [confirmLoading, setConfirmLoading] = useState(false);
+  // const [modalText, setModalText] = useState('');
+  // const [form] = Form.useForm();
+  // const [role, setRole] = useState('');
+  // const [registerDisplay, setRegisterDisplay] = useState('none');
+  // const [userRole, setUserRole] = useState('');
 
-  let tankEditDisplay = 'none';
-  let mdpsEditDisplay = 'none';
-  let prdpsEditDisplay = 'none';
-  let erdpsEditDisplay = 'none';
-  let healersEditDisplay = 'none';
-  let artilleryEditDisplay = 'none';
 
-  let tankChangeDisplay = 'none';
-  let mdpsChangeDisplay = 'none';
-  let prdpsChangeDisplay = 'none';
-  let erdpsChangeDisplay = 'none';
-  let healersChangeDisplay = 'none';
-  let artilleryChangeDisplay = 'none';
+
+  // let tankEditDisplay = 'none';
+  // let mdpsEditDisplay = 'none';
+  // let prdpsEditDisplay = 'none';
+  // let erdpsEditDisplay = 'none';
+  // let healersEditDisplay = 'none';
+  // let artilleryEditDisplay = 'none';
+
+  // let tankChangeDisplay = 'none';
+  // let mdpsChangeDisplay = 'none';
+  // let prdpsChangeDisplay = 'none';
+  // let erdpsChangeDisplay = 'none';
+  // let healersChangeDisplay = 'none';
+  // let artilleryChangeDisplay = 'none';
 
   if (warLoading || userLoading) {
     return <div>Loading...</div>
   }
   
   const token = Auth.loggedIn() ? Auth.getToken() : null;
-  
-  let registerDisplay = 'none'
-  let userRole = '';
 
-  if (Auth.loggedIn() && !allUsers.includes(user)) {
-    registerDisplay = 'inline';
-  } else {
-    registerDisplay = 'none';
-    if (tankUsers.includes(user)) {
-      tankEditDisplay = 'inline';
-      mdpsChangeDisplay = 'inline';
-      prdpsChangeDisplay = 'inline';
-      erdpsChangeDisplay = 'inline';
-      healersChangeDisplay = 'inline';
-      artilleryChangeDisplay = 'inline';
-      userRole = 'tanks'
-    } else if (mdpsUsers.includes(user)) {
-      tankChangeDisplay = 'inline';
-      mdpsEditDisplay = 'inline';
-      prdpsChangeDisplay = 'inline';
-      erdpsChangeDisplay = 'inline';
-      healersChangeDisplay = 'inline';
-      artilleryChangeDisplay = 'inline';
-      userRole = 'mdps';
-    } else if (prdpsUsers.includes(user)) {
-      tankChangeDisplay = 'inline';
-      mdpsChangeDisplay = 'inline';
-      prdpsEditDisplay = 'inline';
-      erdpsChangeDisplay = 'inline';
-      healersChangeDisplay = 'inline';
-      artilleryChangeDisplay = 'inline';
-      userRole = 'prdps';
-    } else if (erdpsUsers.includes(user)) {
-      tankChangeDisplay = 'inline';
-      mdpsChangeDisplay = 'inline';
-      prdpsChangeDisplay = 'inline';
-      erdpsEditDisplay = 'inline';
-      healersChangeDisplay = 'inline';
-      artilleryChangeDisplay = 'inline';
-      userRole = 'erdps';
-    } else if (healersUsers.includes(user)) {
-      tankChangeDisplay = 'inline';
-      mdpsChangeDisplay = 'inline';
-      prdpsChangeDisplay = 'inline';
-      erdpsChangeDisplay = 'inline';
-      healersEditDisplay = 'inline';
-      artilleryChangeDisplay = 'inline';
-      userRole = 'healers'
-    } else if (artilleryUsers.includes(user)) {
-      tankChangeDisplay = 'inline';
-      mdpsChangeDisplay = 'inline';
-      prdpsChangeDisplay = 'inline';
-      erdpsChangeDisplay = 'inline';
-      healersChangeDisplay = 'inline';
-      artilleryEditDisplay = 'inline';
-      userRole = 'artillery';
-    }    
-  }
+  // if (Auth.loggedIn() && !allUsers.includes(user)) {
+  //   registerDisplay = 'inline';
+  // } else {
+  //   setRegisterDisplay('none');
+  //   if (tankUsers.includes(user)) {
+  //     tankEditDisplay = 'inline';
+  //     mdpsChangeDisplay = 'inline';
+  //     prdpsChangeDisplay = 'inline';
+  //     erdpsChangeDisplay = 'inline';
+  //     healersChangeDisplay = 'inline';
+  //     artilleryChangeDisplay = 'inline';
+  //     setUserRole('tanks');
+  //   } else if (mdpsUsers.includes(user)) {
+  //     tankChangeDisplay = 'inline';
+  //     mdpsEditDisplay = 'inline';
+  //     prdpsChangeDisplay = 'inline';
+  //     erdpsChangeDisplay = 'inline';
+  //     healersChangeDisplay = 'inline';
+  //     artilleryChangeDisplay = 'inline';
+  //     setUserRole('mdps');
+  //   } else if (prdpsUsers.includes(user)) {
+  //     tankChangeDisplay = 'inline';
+  //     mdpsChangeDisplay = 'inline';
+  //     prdpsEditDisplay = 'inline';
+  //     erdpsChangeDisplay = 'inline';
+  //     healersChangeDisplay = 'inline';
+  //     artilleryChangeDisplay = 'inline';
+  //     setUserRole('prdps');
+  //   } else if (erdpsUsers.includes(user)) {
+  //     tankChangeDisplay = 'inline';
+  //     mdpsChangeDisplay = 'inline';
+  //     prdpsChangeDisplay = 'inline';
+  //     erdpsEditDisplay = 'inline';
+  //     healersChangeDisplay = 'inline';
+  //     artilleryChangeDisplay = 'inline';
+  //     setUserRole('erdps');
+  //   } else if (healersUsers.includes(user)) {
+  //     tankChangeDisplay = 'inline';
+  //     mdpsChangeDisplay = 'inline';
+  //     prdpsChangeDisplay = 'inline';
+  //     erdpsChangeDisplay = 'inline';
+  //     healersEditDisplay = 'inline';
+  //     artilleryChangeDisplay = 'inline';
+  //     setUserRole('healers');
+  //   } else if (artilleryUsers.includes(user)) {
+  //     tankChangeDisplay = 'inline';
+  //     mdpsChangeDisplay = 'inline';
+  //     prdpsChangeDisplay = 'inline';
+  //     erdpsChangeDisplay = 'inline';
+  //     healersChangeDisplay = 'inline';
+  //     artilleryEditDisplay = 'inline';
+  //     setUserRole('artillery');
+  //   }    
+  // }
 
-  const wepLvls = ['20', '19', '18', '17', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1'];
-  const charLvls = []
-  for(let i=1; i<61; i++) {
-    charLvls.push(`${61 - i}`);
-  }
-  const weps = [{name: 'Sword and Shield', abr: 'SS'}, 
-                {name: 'Rapier', abr: 'RA'}, 
-                {name: 'Hatchet', abr: 'HA'}, 
-                {name: 'Spear', abr: 'SP'},
-                {name: 'Great Axe', abr: 'GA'}, 
-                {name: 'War Hammer', abr: 'WH'}, 
-                {name: 'Bow', abr: 'BO'}, 
-                {name: 'Musket', abr: 'MU'}, 
-                {name: 'Fire Staff', abr: 'FS'}, 
-                {name: 'Life Staff', abr: 'LS'}, 
-                {name: 'Ice Gauntlet', abr: 'IG'}
-              ];
+  // const wepLvls = ['20', '19', '18', '17', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1'];
+  // const charLvls = []
+  // for(let i=1; i<61; i++) {
+  //   charLvls.push(`${61 - i}`);
+  // }
+  // const weps = [{name: 'Sword and Shield', abr: 'SS'}, 
+  //               {name: 'Rapier', abr: 'RA'}, 
+  //               {name: 'Hatchet', abr: 'HA'}, 
+  //               {name: 'Spear', abr: 'SP'},
+  //               {name: 'Great Axe', abr: 'GA'}, 
+  //               {name: 'War Hammer', abr: 'WH'}, 
+  //               {name: 'Bow', abr: 'BO'}, 
+  //               {name: 'Musket', abr: 'MU'}, 
+  //               {name: 'Fire Staff', abr: 'FS'}, 
+  //               {name: 'Life Staff', abr: 'LS'}, 
+  //               {name: 'Ice Gauntlet', abr: 'IG'}
+  //             ];
 
-  const showModal = (e) => {
-    setVisible(true);
-    setModalText('');
-    setRole(e.target.dataset.role);
-  };
+  // const showModal = (e) => {
+  //   setVisible(true);
+  //   setModalText('');
+  //   setRole(e.target.dataset.role);
+  // };
 
-  const handleCancel = () => {
-    console.log('Clicked cancel button');
-    form.resetFields();
-    setVisible(false);
-  };
+  // const handleCancel = () => {
+  //   console.log('Clicked cancel button');
+  //   form.resetFields();
+  //   setVisible(false);
+  // };
 
-  const onFinish = async (values) => {
+  // const onFinish = async (values) => {
     
-    if (!token) {
-      return false;
-    }
+  //   if (!token) {
+  //     return false;
+  //   }
 
-    const charLvl = values.charLvl;
-    const primaryWep = values.primaryWep;
-    const primaryWepLvl = values.primaryWepLvl;
-    const secondaryWep = values.secondaryWep;
-    const secondaryWepLvl = values.secondaryWepLvl;
+  //   const charLvl = values.charLvl;
+  //   const primaryWep = values.primaryWep;
+  //   const primaryWepLvl = values.primaryWepLvl;
+  //   const secondaryWep = values.secondaryWep;
+  //   const secondaryWepLvl = values.secondaryWepLvl;
 
-    let messageText = '';
-    let descriptionText = '';
+  //   let messageText = '';
+  //   let descriptionText = '';
     
-    if (allUsers.includes(user)) {
-      if (userRole === role) {
-        try {
-          const { data } = await updateToWar({ variables: { warId, charLvl, primaryWep, primaryWepLvl, secondaryWep, secondaryWepLvl, role } });
-          if (!data) {
-            throw new Error("Couldn't update user!");
-          }
-          messageText = 'Updated!';
-          descriptionText = 'Your information has been updated!';
-        } catch (err) {
-          console.log(err);
-        }
-      } else {
-        try {
-          const { data } = await changeRole({ variables: { warId, charLvl, primaryWep, primaryWepLvl, secondaryWep, secondaryWepLvl, role } });
-          if (!data) {
-            throw new Error("Couldn't update user!");
-          }
-          messageText = 'Updated!';
-          descriptionText = 'Your role has been changed!';
-        } catch (err) {
-          console.log(err);
-        }
-      }
-    } else {
-      try {
-        const { data } = await addToWar({ variables: { warId, charLvl, primaryWep, primaryWepLvl, secondaryWep, secondaryWepLvl, role } });
-        if (!data) {
-          throw new Error("Couldn't add user to war!");
-        }
-        messageText = 'Registered!';
-        descriptionText = 'Thank you for registering for the upcoming invasion!';
-      } catch (err) {
-        console.log(err);
-      }
-    }
+  //   if (allUsers.includes(user)) {
+  //     if (userRole === role) {
+  //       try {
+  //         const { data } = await updateToWar({ variables: { warId, charLvl, primaryWep, primaryWepLvl, secondaryWep, secondaryWepLvl, role } });
+  //         if (!data) {
+  //           throw new Error("Couldn't update user!");
+  //         }
+  //         messageText = 'Updated!';
+  //         descriptionText = 'Your information has been updated!';
+  //       } catch (err) {
+  //         console.log(err);
+  //       }
+  //     } else {
+  //       try {
+  //         const { data } = await changeRole({ variables: { warId, charLvl, primaryWep, primaryWepLvl, secondaryWep, secondaryWepLvl, role } });
+  //         if (!data) {
+  //           throw new Error("Couldn't update user!");
+  //         }
+  //         messageText = 'Updated!';
+  //         descriptionText = 'Your role has been changed!';
+  //       } catch (err) {
+  //         console.log(err);
+  //       }
+  //     }
+  //   } else {
+  //     try {
+  //       const { data } = await addToWar({ variables: { warId, charLvl, primaryWep, primaryWepLvl, secondaryWep, secondaryWepLvl, role } });
+  //       if (!data) {
+  //         throw new Error("Couldn't add user to war!");
+  //       }
+  //       messageText = 'Registered!';
+  //       descriptionText = 'Thank you for registering for the upcoming invasion!';
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   }
 
-    registerDisplay = 'none';
+  //   setRegisterDisplay('none');
 
-    console.log('Success!', values, 'role:', role);
-    setConfirmLoading(true);
-    setTimeout(() => {
-      setVisible(false);
-      setConfirmLoading(false);
-      notification['success']({
-        message: `${messageText}`,
-        description:
-          `${descriptionText}`,
-        placement: 'topLeft'
-      });
-    }, 100);
-    form.resetFields();
-  }
+  //   console.log('Success!', values, 'role:', role);
+  //   setConfirmLoading(true);
+  //   setTimeout(() => {
+  //     setVisible(false);
+  //     setConfirmLoading(false);
+  //     notification['success']({
+  //       message: `${messageText}`,
+  //       description:
+  //         `${descriptionText}`,
+  //       placement: 'topLeft'
+  //     });
+  //   }, 100);
+  //   form.resetFields();
+  // }
 
   const handleDelete = async () => {
     if (!token) {
@@ -264,8 +295,11 @@ const SingleWar = () => {
             <button onClick = {handleDelete} style={{height: 30, backgroundColor: red[4], color: 'white', borderRadius: 4 }}>Delete War</button>
           </form>
         </div>
-  
-        <Modal
+        <MyProvider>
+          <MyModal warId={warId} token={token} user={user} allUsers={allUsers}/>
+          <RoleBox user={user} allUsers={allUsers} tanks={tanks} mdps={mdps} prdps={prdps} erdps={erdps} healers={healers} artillery={artillery} tankUsers={tankUsers} mdpsUsers={mdpsUsers} prdpsUsers={prdpsUsers} erdpsUsers={erdpsUsers} healersUsers={healersUsers} artilleryUsers={artilleryUsers} />
+        </MyProvider>
+        {/* <Modal
           title=''
           visible={visible}
           confirmLoading={confirmLoading}
@@ -324,9 +358,9 @@ const SingleWar = () => {
               <Button key="submit" style={{backgroundColor: purple[3], borderColor: purple[3]}} type="primary" loading={confirmLoading} htmlType="submit">Submit</Button>
             </Form.Item>
           </Form>
-        </Modal>
+        </Modal> */}
   
-        <Row justify="space-around">
+        {/* <Row justify="space-around">
           
           <Col className="gutter-row" xs={24} md={8} style={{ padding: '8px 0' }}>
             <Card title="Tanks 🛡" headStyle={{ fontSize: '20px', backgroundColor: grey[7], color: 'white' }} bodyStyle={{ backgroundColor: grey[6], color: 'white'}} extra={<Tooltip title="Register for this war as a Tank" color = {purple[3]}>
@@ -408,7 +442,7 @@ const SingleWar = () => {
               })}
             </Card>
           </Col>
-        </Row>
+        </Row> */}
       </div>
     );
   } 
