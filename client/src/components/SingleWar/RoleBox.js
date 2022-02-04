@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { WarContext } from "./WarContext";
 
 import { Row, Col, Card, Tooltip, Button } from "antd";
-import { purple, grey} from "@ant-design/colors";
+import { purple, grey } from "@ant-design/colors";
 
 import Auth from '../../utils/auth';
 
